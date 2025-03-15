@@ -7,6 +7,22 @@
 */
 
 (function() {
+  document.addEventListener('DOMContentLoaded', function () {
+    const navItems = document.querySelectorAll('.navmenu ul li');
+  
+    navItems.forEach(item => {
+      item.addEventListener('click', function () {
+        // Check if the Vibration API is supported
+        if ('vibrate' in navigator) {
+          // Vibrate for 50 milliseconds
+          navigator.vibrate(50);
+        }
+      });
+    });
+  });
+
+
+
   "use strict";
 
   /**
