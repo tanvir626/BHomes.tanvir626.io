@@ -42,7 +42,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about" id="aboutLink">About</a></li>
+          <li><a href="#about" >About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
@@ -992,11 +992,6 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!--Vibration Script-->
-  document.getElementById("aboutLink").addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent default link behavior
-    navigator.vibrate(1000); // Vibrate for 1 second
-});
 </body>
 
 </html>
