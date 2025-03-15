@@ -973,6 +973,23 @@
 
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const navItems = document.querySelectorAll('.navmenu ul li');
+  
+    navItems.forEach(item => {
+      item.addEventListener('click', function () {
+        // Check if the Vibration API is supported
+        if ('vibrate' in navigator) {
+          // Vibrate for 50 milliseconds
+          navigator.vibrate(50);
+        }
+      });
+    });
+  });
+  </script>
+
+
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
