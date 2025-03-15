@@ -26,14 +26,6 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Dewi
-  * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
@@ -50,7 +42,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#about" id="aboutLink">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
@@ -1000,6 +992,11 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!--Vibration Script-->
+  document.getElementById("aboutLink").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    navigator.vibrate(1000); // Vibrate for 1 second
+});
 </body>
 
 </html>
