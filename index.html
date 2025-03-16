@@ -976,59 +976,22 @@
 
   </footer>
 
-<!--Start Hero Video Section-->
-<script>
-window.addEventListener('resize', updateVideoSource);
-window.addEventListener('load', updateVideoSource);
-
-function updateVideoSource() {
-  const videoElement = document.getElementById('MyVideo');
-  const videoSource = document.getElementById('video-source');
-
-  // Check if the screen width is less than or equal to 768px (for mobile view)
-  if (window.innerWidth <= 768) {
-      // Change the video source for mobile
-      videoSource.src = 'Visiting Bharateswari Homes _ Mirzapur _ Tangail _ Dhaka _ 03 _ Sunday _ March 21 _ 2021 _ 1_26_pm.mp4';
-  } else {
-      // Change the video source for desktop
-      videoSource.src = 'HomeVideo.mp4';
-  }
-
-  // Load the new video source
-  videoElement.load();
-}
-</script>
-<!--End Hero Video Section-->
 
 
-
-
- <!-- Start of Typing Effect-->
+<!--Hero Section Dependencies-->
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-<script>
-  const typed = new Typed('#typingParagraph', {
-    strings: ['This effect is super cool!', "I'm going to use it.", 'All the time!'],
-    typeSpeed: 100,
-    loop: true  // This will make the text loop continuously
-  });
-</script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init(); // Initialize AOS
-</script>
-<!-- END of Typing Effect-->
+<!--Hero Section-->
+<script src="/assets/Section/Hero_Section/Js/Hero_Section.js"></script>
+
+
+
   
   
-  
-<!-- END of Typing Effect-->
   
   
   
   <script>
- document.addEventListener("DOMContentLoaded", function() {
-        var video = document.getElementById("MyVideo");
-        video.playbackRate = 5.0; // 2x Speed
-    })
 
 
     document.addEventListener('DOMContentLoaded', function () {
