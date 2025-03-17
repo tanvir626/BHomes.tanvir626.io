@@ -907,33 +907,31 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+            <form class="php-email-form" data-aos="fade-up" data-aos-delay="500">
               <div class="row gy-4">
-
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
                 </div>
-
-                <div class="col-md-6 ">
+            
+                <div class="col-md-6">
                   <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
                 </div>
-
+            
                 <div class="col-md-12">
                   <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
                 </div>
-
+            
                 <div class="col-md-12">
                   <textarea class="form-control" name="message" rows="4" placeholder="Message" required=""></textarea>
                 </div>
-
+            
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
+                  <div class="loading" style="display: none;">Loading...</div>
+                  
+                  <div class="sent-message" style="display: none; color: white; background-color: green; padding: 10px; border-radius: 5px;">Your message has been sent. Thank you!</div>
+            
+                  <button type="submit" onclick="sendMail();">Send Message</button>
                 </div>
-
               </div>
             </form>
           </div><!-- End Contact Form -->
@@ -960,8 +958,7 @@
               +880-1711425822<br>
               bharateswarihomes1945@gmail.com<br>
             </p>
-
-
+            
     <div class="container copyright text-center mt-4" style="display: none;">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Dewi</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
@@ -974,6 +971,52 @@
     </div>
 
   </footer>
+
+
+<!--Email To Tanvir-->
+ <!-- EmailJS Library -->
+ <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+ <script>
+ document.addEventListener("DOMContentLoaded", function () {
+   emailjs.init("4tYxNLT7HyFuP9D-H"); // Replace with your actual EmailJS User ID
+ });
+ 
+ function sendMail() {
+  var params = {
+    name: document.querySelector('[name="name"]').value,
+    email: document.querySelector('[name="email"]').value,
+    subject: document.querySelector('[name="subject"]').value,
+    message: document.querySelector('[name="message"]').value,
+  };
+
+  const serviceID = "service_typ7xkr"; // Replace with your actual service ID
+  const templateID = "template_0l5w9zg"; // Replace with your actual template ID from EmailJS
+
+  document.querySelector(".loading").style.display = "block"; // Show loading message
+
+  emailjs.send(serviceID, templateID, params)
+    .then((res) => {
+      // Hide loading, show success message
+      document.querySelector(".loading").style.display = "none";
+      document.querySelector(".sent-message").style.display = "block";
+
+      // Clear input fields
+      document.querySelector('[name="name"]').value = "";
+      document.querySelector('[name="email"]').value = "";
+      document.querySelector('[name="subject"]').value = "";
+      document.querySelector('[name="message"]').value = "";
+
+      console.log("Success:", res);
+    })
+    .catch((err) => {
+      // Hide loading without showing error message
+      document.querySelector(".loading").style.display = "none";
+      console.log("Error:", err); // You can remove this line if you don't want to log errors
+    });
+}
+
+ </script>
+
 
 
 
@@ -1002,6 +1045,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
 
 </body>
 
