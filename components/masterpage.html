@@ -167,22 +167,25 @@
 
 
 
-  <script>
+<script>
  
+  // Function to get URL query parameters
   function getQueryParam(name) {
       const urlParams = new URLSearchParams(window.location.search);
       return urlParams.get(name);
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-      const page =  getQueryParam('page'); // Get 'page' parameter from URL
-      const title = getQueryParam('title');  // Get the title parameter
+      const page = getQueryParam('page'); // Get 'page' parameter from URL
+      const title = getQueryParam('title'); // Get the title parameter
       if (page) {
-          loadContent(`/Pages/About/${page}`, title);
+          loadContent(`/BHomes.tanvir626.io/Pages/About/${page}`, title);
       }
   });
 
 
+
+    // Function to load content dynamically
 function loadContent(page , title) {
     document.getElementById("title").innerHTML = title;
     fetch(page)
