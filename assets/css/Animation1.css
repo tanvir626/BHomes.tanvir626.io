@@ -1,0 +1,15 @@
+.animation1 {
+  animation: animationshow1 both;
+  animation-timeline: view(1% 100% );
+}
+
+@keyframes animationshow1 {
+    from{
+        opercity: 0;
+        transform: translateY(200px) scale();
+
+        opercity: 1;
+        transform: translateY(0) scale(0.9);
+
+    }
+}
