@@ -30,28 +30,3 @@
   </div>
 </section>
 
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  // Select all the paragraphs inside the section
-  const paragraphs = document.querySelectorAll('#about .col-lg-6 p');
-
-  // Create an Intersection Observer to detect when the paragraphs enter the viewport
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Add the class that triggers the animation
-        entry.target.classList.add('animate-paragraph');
-        observer.unobserve(entry.target); // Stop observing once the animation has been triggered
-      }
-    });
-  }, {
-    threshold: 0.5 // Trigger the animation when 50% of the paragraph is in view
-  });
-
-  // Observe each paragraph
-  paragraphs.forEach(paragraph => {
-    observer.observe(paragraph);
-  });
-});
-</script>
