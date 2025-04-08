@@ -14,7 +14,7 @@
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Inter",  sans-serif;
+  --nav-font: "Times New Roman",  sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -33,7 +33,7 @@
   --nav-hover-color: #ff4a17; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-color: #fdfbfb; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #ff4a17; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
@@ -45,7 +45,7 @@
 }
 
 .dark-background {
-  --background-color: #000910;
+  --background-color: #39b1fc99;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #28323a;
@@ -290,7 +290,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(0, 143, 245, 0.85);
+  --background-color: rgba(0, 143, 245, 0.95);
 }
 
 /*--------------------------------------------------------------
@@ -300,6 +300,7 @@ h6 {
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
+   
   }
 
   .navmenu ul {
@@ -308,15 +309,19 @@ h6 {
     display: flex;
     list-style: none;
     align-items: center;
+    
   }
 
   .navmenu li {
     position: relative;
+   
   }
 
   .navmenu>ul>li {
     white-space: nowrap;
     padding: 15px 14px;
+    
+    
   }
 
   .navmenu>ul>li:last-child {
@@ -364,6 +369,7 @@ h6 {
   .navmenu .active:before {
     visibility: visible;
     width: 100%;
+    
   }
 
   .navmenu li:hover>a,
@@ -396,7 +402,7 @@ h6 {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: none;
-    color: var(--nav-dropdown-color);
+    color: black;
   }
 
   .navmenu .dropdown ul a i {
@@ -406,7 +412,7 @@ h6 {
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
+    color: black;
   }
 
   .navmenu .dropdown:hover>ul {
@@ -456,8 +462,8 @@ h6 {
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
-    background-color: #cedaea;  /* Blue background for professionalism */
-    border: 1px solid #0056b3;  /* Blue border for a cohesive look */
+    background-color: #4595ff;  /* Blue background for professionalism */
+    border: 1px solid #4595ff;  /* Blue border for a cohesive look */
     color: #ffffff;  /* White font color */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Added subtle shadow for depth */
     overflow-y: auto;
@@ -517,7 +523,7 @@ h6 {
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: white;
+    color: rgb(255, 251, 0);
   }
 
   .navmenu .active i,
@@ -543,7 +549,11 @@ h6 {
 
   .navmenu .dropdown>.dropdown-active {
     display: block;
-    background-color: white;
+    background-color: transparent;
+      border-left: 3px solid #fcfbfb; /* Adjust width and color as needed */
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
   }
 
   .mobile-nav-active {
