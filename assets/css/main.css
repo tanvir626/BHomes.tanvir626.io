@@ -450,26 +450,29 @@ h6 {
   .navmenu {
     padding: 0;
     z-index: 9997;
+    max-height: 100vh;
   }
 
   .navmenu ul {
     display: none;
     list-style: none;
     position: absolute;
-    top: 60px;  /* Adjusted for better positioning */
+    top: 60px;
     left: 20px;
     right: 20px;
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
-    background-color: #4595ff;  /* Blue background for professionalism */
-    border: 1px solid #4595ff;  /* Blue border for a cohesive look */
-    color: #ffffff;  /* White font color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Added subtle shadow for depth */
+    background-color: #4595ff;
+    border: 1px solid #4595ff;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
+    max-height: 100vh; /* ✅ Add this */
     transition: 0.3s;
     z-index: 9998;
   }
+  
   
   .navmenu ul li {
     padding: 10px 20px;
