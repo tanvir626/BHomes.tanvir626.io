@@ -77,13 +77,28 @@
 <li class="dropdown">
                 <a href="#about"><span>Academics</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                  <li><a href="/BHomes.tanvir626.io/components/masterpage.html?page=About_BH.html&title=About BH">Facuty Members</a></li>
-                    <li><a href="/BHomes.tanvir626.io/components/masterpage.html?page=Our_Founder.html&title=Our Founder">Departments</a></li>
-                    <li><a href="/BHomes.tanvir626.io/components/masterpage.html?page=our_aim.html&title=Our Aim">Extra Curriculam Activity</a></li>                      
-                    <li><a href="/BHomes.tanvir626.io/components/masterpage.html?page=our_aim.html&title=Our Aim">Library and Archive</a></li>                      
+                   <li><a href="/BHomes.tanvir626.io/components/masterpage.html?page=Academic_FacultyMember.html&title=Facuty Members">Facuty Members</a></li>
+                    <li><a href="/BHomes.tanvir626.io/components/masterpage.html?page=Our_Founder.html&title=Our Founder">Departments</a></li>            
+                    <li><a href="/BHomes.tanvir626.io/components/masterpage.html?page=our_aim.html&title=Our Aim">Library and Archive</a></li>       
+                  <li><a href="/BHomes.tanvir626.io/components/masterpage.html?page=About_BH.html&title=About BH">Academic Calender</a></li>
+                 
                 </ul>
             </li>  
-            
+
+<!-- Extra Curriculam Activities -->
+<li class="dropdown">
+                <a href="#about"><span>Extra Curriculam Activities</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                   <li><a href="/BHomes.tanvir626.io/components/masterpage.html?page=About_BH.html&title=About BH">Sports</a></li>
+                    <li><a href="/BHomes.tanvir626.io/components/masterpage.html?page=Our_Founder.html&title=Our Founder">Music</a></li>            
+                    <li><a href="/BHomes.tanvir626.io/components/masterpage.html?page=our_aim.html&title=Our Aim">Student's Club Activities</a></li>     
+                 
+                </ul>
+            </li> 
+
+          
+   <li><a href="#hero">Notice</a></li>
+            <li><a href="#contact" >Contact Us</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -177,7 +192,7 @@
       const page = getQueryParam('page'); // Get 'page' parameter from URL
       const title = getQueryParam('title'); // Get the title parameter
       if (page) {
-          loadContent(`/BHomes.tanvir626.io/Pages/About/${page}`, title);
+          loadContent(`/BHomes.tanvir626.io/Pages/${page}`, title);
       }
   });
 
